@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8BAB4AD0-7031-474C-923A-FAE4B7BB59DB}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>openslide</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{D51BCBC9-82E9-4017-911E-C93873C4EA2B}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <RemoteRootDir>/mnt/d/build</RemoteRootDir>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <RemoteRootDir>/mnt/d/build</RemoteRootDir>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalRemoteCopySources>false</LocalRemoteCopySources>
+    <RemoteBuildCommandLine>make all</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>make clean; make all</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
+    <ProjectPublicIncludePath>/usr/include/openjpeg-2.3;</ProjectPublicIncludePath>
+    <RemoteBuildOutputs>src/.libs/libopenslide.so.0.4.1;src/libopenslide.la;tools/.libs/openslide-quickhash1sum;tools/.libs/openslide-show-properties;tools/.libs/openslide-write-png</RemoteBuildOutputs>
+    <OutDir>$(ProjectDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)obj\</IntDir>
+    <RemoteDeployDir>$(RemoteProjectDir)/bin</RemoteDeployDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalRemoteCopySources>false</LocalRemoteCopySources>
+    <RemoteBuildCommandLine>make all</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>make clean; make all</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>make clean</RemoteCleanCommandLine>
+    <ProjectPublicIncludePath>/usr/include/openjpeg-2.3;</ProjectPublicIncludePath>
+    <RemoteBuildOutputs>src/.libs/libopenslide.so.0.4.1;src/libopenslide.la;tools/.libs/openslide-quickhash1sum;tools/.libs/openslide-show-properties;tools/.libs/openslide-write-png</RemoteBuildOutputs>
+    <OutDir>$(ProjectDir)bin\</OutDir>
+    <IntDir>$(ProjectDir)obj\</IntDir>
+    <RemoteDeployDir>$(RemoteProjectDir)/bin</RemoteDeployDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClInclude Include="common\openslide-common.h" />
+    <ClInclude Include="src\openslide-cairo.h" />
+    <ClInclude Include="src\openslide-decode-gdkpixbuf.h" />
+    <ClInclude Include="src\openslide-decode-jp2k.h" />
+    <ClInclude Include="src\openslide-decode-jpeg.h" />
+    <ClInclude Include="src\openslide-decode-png.h" />
+    <ClInclude Include="src\openslide-decode-sqlite.h" />
+    <ClInclude Include="src\openslide-decode-tiff.h" />
+    <ClInclude Include="src\openslide-decode-tifflike.h" />
+    <ClInclude Include="src\openslide-decode-xml.h" />
+    <ClInclude Include="src\openslide-error.h" />
+    <ClInclude Include="src\openslide-features.h" />
+    <ClInclude Include="src\openslide-hash.h" />
+    <ClInclude Include="src\openslide-private.h" />
+    <ClInclude Include="src\openslide.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\openslide-common-cmdline.c" />
+    <ClCompile Include="common\openslide-common-fail.c" />
+    <ClCompile Include="common\openslide-common-fd.c" />
+    <ClCompile Include="misc\aperio-bad-jp2k-tiles.c" />
+    <ClCompile Include="misc\read-benchmark.c" />
+    <ClCompile Include="misc\read-region.c" />
+    <ClCompile Include="src\make-tables.c" />
+    <ClCompile Include="src\openslide-cache.c" />
+    <ClCompile Include="src\openslide-decode-gdkpixbuf.c" />
+    <ClCompile Include="src\openslide-decode-jp2k.c" />
+    <ClCompile Include="src\openslide-decode-jpeg.c" />
+    <ClCompile Include="src\openslide-decode-png.c" />
+    <ClCompile Include="src\openslide-decode-sqlite.c" />
+    <ClCompile Include="src\openslide-decode-tiff.c" />
+    <ClCompile Include="src\openslide-decode-tifflike.c" />
+    <ClCompile Include="src\openslide-decode-xml.c" />
+    <ClCompile Include="src\openslide-error.c" />
+    <ClCompile Include="src\openslide-grid.c" />
+    <ClCompile Include="src\openslide-hash.c" />
+    <ClCompile Include="src\openslide-jdatasrc.c" />
+    <ClCompile Include="src\openslide-util.c" />
+    <ClCompile Include="src\openslide-vendor-aperio.c" />
+    <ClCompile Include="src\openslide-vendor-generic-tiff.c" />
+    <ClCompile Include="src\openslide-vendor-hamamatsu.c" />
+    <ClCompile Include="src\openslide-vendor-leica.c" />
+    <ClCompile Include="src\openslide-vendor-mirax.c" />
+    <ClCompile Include="src\openslide-vendor-philips.c" />
+    <ClCompile Include="src\openslide-vendor-sakura.c" />
+    <ClCompile Include="src\openslide-vendor-trestle.c" />
+    <ClCompile Include="src\openslide-vendor-ventana.c" />
+    <ClCompile Include="src\openslide.c" />
+    <ClCompile Include="test\extended.c" />
+    <ClCompile Include="test\mosaic.c" />
+    <ClCompile Include="test\parallel.c" />
+    <ClCompile Include="test\profile.c" />
+    <ClCompile Include="test\query.c" />
+    <ClCompile Include="test\symlink.c" />
+    <ClCompile Include="test\test.c" />
+    <ClCompile Include="test\try_open.c" />
+    <ClCompile Include="tools\openslide-quickhash1sum.c" />
+    <ClCompile Include="tools\openslide-show-properties.c" />
+    <ClCompile Include="tools\openslide-write-png.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include=".gitignore">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include=".travis.yml">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="configure">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="configure.ac">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="doc\Doxyfile" />
+    <None Include="m4\.gitignore" />
+    <None Include="m4\libtool.m4" />
+    <None Include="m4\ltoptions.m4" />
+    <None Include="m4\ltsugar.m4" />
+    <None Include="m4\ltversion.m4" />
+    <None Include="m4\lt~obsolete.m4" />
+    <None Include="m4\visibility.m4" />
+    <None Include="m4\warnings.m4" />
+    <None Include="Makefile">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="Makefile.am">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="misc\bulk-testcase-helper.sh" />
+    <None Include="misc\reconstruct.m" />
+    <None Include="openslide.pc.in">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="src\openslide-dll.manifest.in" />
+    <None Include="src\openslide-dll.rc.in" />
+    <None Include="test\cases\mosaic.ini" />
+    <None Include="test\cases\slides.yaml" />
+    <None Include="test\driver.in" />
+    <None Include="test\valgrind.supp" />
+    <None Include="tools\.gitignore">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tools\openslide-quickhash1sum.1.in">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tools\openslide-show-properties.1.in">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+    <None Include="tools\openslide-write-png.1.in">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CHANGELOG.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="CONTRIBUTING.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="lgpl-2.1.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="LICENSE.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="README.txt">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <RemotePreBuildEvent>
+      <Command>cd ./bin;rm -f libopenslide.so; rm -f libopenslide.so.0</Command>
+      <Message>clean deploy linked dynamic library</Message>
+    </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>cd ./bin; ln -s -f libopenslide.so.0.4.1 libopenslide.so.0; ln -s -f libopenslide.so.0.4.1 libopenslide.so; </Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemotePreBuildEvent>
+      <Command>cd ./bin;rm -f libopenslide.so; rm -f libopenslide.so.0</Command>
+      <Message>clean deploy linked dynamic library</Message>
+    </RemotePreBuildEvent>
+    <RemotePostBuildEvent>
+      <Command>cd ./bin; ln -s -f libopenslide.so.0.4.1 libopenslide.so.0; ln -s -f libopenslide.so.0.4.1 libopenslide.so; </Command>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

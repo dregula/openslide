@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{9b739c7a-a019-403e-8a4f-e39898c1a640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{19085e86-0ffc-4f38-af5b-b434326bfe16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="m4">
+      <UniqueIdentifier>{2886b8e8-8a17-4372-bbba-ab82166a5cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{113f3137-3849-4d4f-9f58-00c37f30291d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{758b94ad-f310-4f3b-8658-2ea6d5dbcb51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test">
+      <UniqueIdentifier>{a290e0ff-8bd2-441a-b8a0-145cf56a2065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{b4427293-144a-4a12-87ad-e39ba13845c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\cases">
+      <UniqueIdentifier>{ef618244-0a5b-49aa-8e61-0f62ffa827cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\openslide-common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-cairo.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-gdkpixbuf.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-jp2k.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-jpeg.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-png.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-sqlite.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-tiff.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-tifflike.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-decode-xml.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-error.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-features.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-hash.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\openslide-private.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\openslide-common-cmdline.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\openslide-common-fail.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\openslide-common-fd.c">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\aperio-bad-jp2k-tiles.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\read-benchmark.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="misc\read-region.c">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\make-tables.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-cache.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-gdkpixbuf.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-jp2k.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-jpeg.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-png.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-sqlite.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-tiff.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-tifflike.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-decode-xml.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-error.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-grid.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-hash.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-jdatasrc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-util.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-aperio.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-generic-tiff.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-hamamatsu.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-leica.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-mirax.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-philips.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-sakura.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-trestle.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\openslide-vendor-ventana.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="test\extended.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\mosaic.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\parallel.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\profile.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\query.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\symlink.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="test\try_open.c">
+      <Filter>test</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\openslide-quickhash1sum.c">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\openslide-show-properties.c">
+      <Filter>tools</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\openslide-write-png.c">
+      <Filter>tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="doc\Doxyfile">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="m4\.gitignore">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="m4\libtool.m4">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="m4\lt~obsolete.m4">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="m4\ltoptions.m4">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="m4\ltsugar.m4">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="m4\ltversion.m4">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="m4\visibility.m4">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="m4\warnings.m4">
+      <Filter>m4</Filter>
+    </None>
+    <None Include="misc\bulk-testcase-helper.sh">
+      <Filter>misc</Filter>
+    </None>
+    <None Include="misc\reconstruct.m">
+      <Filter>misc</Filter>
+    </None>
+    <None Include="src\openslide-dll.manifest.in">
+      <Filter>src</Filter>
+    </None>
+    <None Include="src\openslide-dll.rc.in">
+      <Filter>src</Filter>
+    </None>
+    <None Include="test\driver.in">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\valgrind.supp">
+      <Filter>test</Filter>
+    </None>
+    <None Include="test\cases\mosaic.ini">
+      <Filter>test\cases</Filter>
+    </None>
+    <None Include="test\cases\slides.yaml">
+      <Filter>test\cases</Filter>
+    </None>
+    <None Include="tools\.gitignore">
+      <Filter>tools</Filter>
+    </None>
+    <None Include="tools\openslide-quickhash1sum.1.in">
+      <Filter>tools</Filter>
+    </None>
+    <None Include="tools\openslide-show-properties.1.in">
+      <Filter>tools</Filter>
+    </None>
+    <None Include="tools\openslide-write-png.1.in">
+      <Filter>tools</Filter>
+    </None>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include=".travis.yml" />
+    <None Include="configure.ac" />
+    <None Include="Makefile.am" />
+    <None Include="openslide.pc.in" />
+    <None Include="configure" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="CHANGELOG.txt" />
+    <Text Include="CONTRIBUTING.txt" />
+    <Text Include="lgpl-2.1.txt" />
+    <Text Include="LICENSE.txt" />
+    <Text Include="README.txt" />
+  </ItemGroup>
+</Project>
